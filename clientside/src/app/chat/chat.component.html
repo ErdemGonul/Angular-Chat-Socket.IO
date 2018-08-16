@@ -1,0 +1,10 @@
+
+<h1>Hi {{nickname}}, you are talking with {{friendname}}</h1>
+
+<div *ngFor="let message of messages;let i=index">
+ {{talkersorder[i]}} :{{message}}
+</div>
+
+<input [(ngModel)]="message" (keyup)="$event.keyCode == 13 && sendMessage()" />
+<button (click)="sendMessage()">Send</button>
+<button (click)="toLobbies()">Go Back To Lobby</button>
