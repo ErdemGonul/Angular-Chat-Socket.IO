@@ -1,6 +1,7 @@
 
 <h1> Lobbies</h1>
 <div *ngFor="let lobby of lobbies">
-    {{lobby}}
+  <a (click)="navigateToChat($event.target.innerText)"> {{lobby}}</a>
+   
   </div>
   

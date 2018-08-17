@@ -5,6 +5,15 @@
  {{talkersorder[i]}} :{{message}}
 </div>
 
+
+
 <input [(ngModel)]="message" (keyup)="$event.keyCode == 13 && sendMessage()" />
 <button (click)="sendMessage()">Send</button>
 <button (click)="toLobbies()">Go Back To Lobby</button>
+
+
+<h1>Lobbies</h1>
+<div *ngFor="let list of lobbylist;">
+
+    {{list}}
+</div>

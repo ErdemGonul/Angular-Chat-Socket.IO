@@ -11,8 +11,8 @@ export class LobbyserviceService {
   lobby:string;
   lobbies: string[] = [];
 
-  addLobby(){
+  addLobby(lobbyname){
 
-    this.lobbies.push(this.lobby);
+    this.lobbies.push(lobbyname);
   }
 }
