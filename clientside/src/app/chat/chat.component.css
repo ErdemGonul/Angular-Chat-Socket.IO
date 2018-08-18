@@ -1,0 +1,65 @@
+.form-group label,input{
+    width:50%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+  
+
+.form-group input{
+
+    border-radius: 15px;
+    margin-bottom: 50px;
+    width: 85%;
+    margin-right: 0px;
+    margin-left: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 100%;
+}
+.form-group button{
+    width: 15%;
+    margin-left: 0px;
+    font-size: 300%;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.form-group > *{
+   height: 100%;    
+}
+.form-group { 
+    
+    max-width: 90%;
+    position:fixed;
+    left:22%;
+    bottom:0px;
+    height:6%;
+    width:58%;
+    
+}
+
+#messagepanel{
+    width:100%;
+    height:550px;
+    margin-top: 0px;
+    padding-left: 50px;
+    overflow-y:auto;
+    overflow-x: hidden;
+}
+#messagepanel div{
+    font-size: 30px;
+    margin-left: 25px;
+    vertical-align: 0px;
+}
+#messagepanel div button{
+    float: right;
+    width: 300px;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-size: 100%;
+    margin-left:430px;
+    background:none;
+    border:none;
+}

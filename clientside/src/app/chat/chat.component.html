@@ -1,19 +1,25 @@
 
-<h1>Hi {{nickname}}, you are talking with {{friendname}}</h1>
 
-<div *ngFor="let message of messages;let i=index">
+
+
+<div id="messagepanel">
+    <div class="row">
+        <h1>{{friendname}} is connected</h1>   <button (click)="toLobbies()" type="button" class="btn btn-success">Back To Lobby</button>
+</div>
+        <div class="row" *ngFor="let message of messages;let i=index">
  {{talkersorder[i]}} :{{message}}
 </div>
-
-
-
-<input [(ngModel)]="message" (keyup)="$event.keyCode == 13 && sendMessage()" />
-<button (click)="sendMessage()">Send</button>
-<button (click)="toLobbies()">Go Back To Lobby</button>
-
-
-<h1>Lobbies</h1>
-<div *ngFor="let list of lobbylist;">
-
-    {{list}}
 </div>
+
+
+<div class="form-group row" >
+    <input [(ngModel)]="message" (keyup)="$event.keyCode == 13 && sendMessage()"
+     class="form-control form-control-lg" placeholder="Send a message" id="inputLarge" type="text">
+     <button (click)="sendMessage()" type="button" class="btn btn-success">Send</button>
+    </div>
+
+
+
+
+
+

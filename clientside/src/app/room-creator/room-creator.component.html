@@ -1,9 +1,14 @@
 <div>
 
-  <h3>Enter Rooms Name:</h3>
-  <input [(ngModel)]="lobbyname" (keyup)="$event.keyCode==13" />
-  <button (click)="lobbyNameCreated()" >Next</button>
-
+  <div class="form-group">
+    <label id="lbl">Enter Room Name:</label><br>
+    <div class="row">
+    <input [(ngModel)]="lobbyname" (keyup)="$event.keyCode==13"
+    class="form-control form-control-lg" placeholder="Room Name" id="inputLarge" type="text">
+     <button id="createroombutton" (click)="lobbyNameCreated()" type="button" class="btn btn-success">Create Room</button>
+     </div><label>OR</label><br>
+     <button  (click)="toJoin()" type="button" class="btn btn-success">Join a Room</button>
+    </div>
 
 
 </div>

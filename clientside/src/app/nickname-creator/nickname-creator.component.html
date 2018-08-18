@@ -1,8 +1,14 @@
 <div>
 
-  <h3>Enter a nickname:</h3>
-  <input [(ngModel)]="nickname" (keyup)="$event.keyCode==13" />
-  <button (click)="nicknameCreated()" >Next</button>
+
+  <div class="form-group">
+      <label class="col-form-label col-form-label-lg" for="inputLarge">Enter a nickname:</label>
+      <input [(ngModel)]="nickname" (keyup)="$event.keyCode==13"
+       class="form-control form-control-lg" placeholder="Nick" id="inputLarge" type="text">
+       <button (click)="nicknameCreated()" type="button" class="btn btn-success">Next</button>
+      </div>
+  
+  
 
 
 
