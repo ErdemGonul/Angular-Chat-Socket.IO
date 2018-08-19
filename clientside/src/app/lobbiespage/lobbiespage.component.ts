@@ -14,8 +14,9 @@ export class LobbiespageComponent implements OnInit {
   constructor(private router: Router,private user:UserServiceService,private lobbyservice:LobbyserviceService,private chatService:ChatService) { }
 
   ngOnInit() {
-    this.lobbies=this.lobbyservice.lobbies;
-
+    this.chatService.roomListCaller();
+    
+    
     this.chatService.getRoomList().subscribe((roomList) => {
       this.lobbies=roomList;
       this.lobbyservice.lobbies=this.lobbies;
@@ -26,6 +27,9 @@ export class LobbiespageComponent implements OnInit {
   navigateToChat(name){
     this.user.lobbyname=name;
     this.router.navigateByUrl('/chat');
+  }
+  navigateToLobbyCreator(){
+    this.router.navigateByUrl('room');
   }
  
 }

@@ -47,19 +47,25 @@
     padding-left: 50px;
     overflow-y:auto;
     overflow-x: hidden;
+    
 }
-#messagepanel div{
+.messages{
+   
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.headermessage{
+    margin-bottom: 20px;
+}
+
+#messagepanel div h1{
+    float: left;
     font-size: 30px;
-    margin-left: 25px;
-    vertical-align: 0px;
+    
 }
-#messagepanel div button{
+#messagepanel div a{
     float: right;
-    width: 300px;
-    margin-left: 0px;
-    margin-top: 0px;
-    font-size: 100%;
-    margin-left:430px;
-    background:none;
-    border:none;
+    margin-right: 35px;
+    font-size: 30px;
 }

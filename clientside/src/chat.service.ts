@@ -25,13 +25,16 @@ export class ChatService {
     public sendName(name){
         this.socket.emit('name',name);
     }
-
+    public roomListCaller(){
+        this.socket.emit('getroom','calling rooms');
+    }
     public getMessages ()  {
         return Observable.create((observer) => {
             
             this.socket.on('new-message', (message) => {
                 observer.next(message);
             });
+        
         });
 }
     public getRoomList(){

@@ -3,10 +3,11 @@
 
 
 <div id="messagepanel">
-    <div class="row">
-        <h1>{{friendname}} is connected</h1>   <button (click)="toLobbies()" type="button" class="btn btn-success">Back To Lobby</button>
-</div>
-        <div class="row" *ngFor="let message of messages;let i=index">
+    <div class="headermessage">
+        <h1 >{{stringonheader}}</h1>
+        <a (click)="toLobbies()">Back To Lobby</a>
+    </div><br><br><br>
+        <div class="messages" *ngFor="let message of messages;let i=index">
  {{talkersorder[i]}} :{{message}}
 </div>
 </div>

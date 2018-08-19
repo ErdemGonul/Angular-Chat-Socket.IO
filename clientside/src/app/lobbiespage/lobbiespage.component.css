@@ -11,3 +11,15 @@
     margin-left: 50px;
     
 }
+.headerpanel h1{
+    float: left;
+    font-size: 30px;
+    
+}
+.headerpanel button{
+    float: right;
+    margin-right: 35px;
+    font-size: 30px;
+    border-radius: 10px;
+    width:25%;
+}

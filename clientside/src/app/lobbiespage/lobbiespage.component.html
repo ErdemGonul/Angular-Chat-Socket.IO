@@ -1,5 +1,8 @@
 <div id="messagepanel">
+  <div class="headerpanel">
 <h1> Lobbies</h1>
+<button id="createroombutton" (click)="navigateToLobbyCreator()" type="button" class="btn btn-success">Create Room</button>
+</div>
 <div *ngFor="let lobby of lobbies">
   <a (click)="navigateToChat($event.target.innerText)"> {{lobby}}</a>
    

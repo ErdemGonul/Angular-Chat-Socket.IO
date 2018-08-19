@@ -12,43 +12,36 @@ const port = process.env.PORT || 3000;
 io.on('connection', (socket) => {
     
     
+    var name;
+    var connectedRoom;
 
-    var connectedRoom=Array();
-
-
+    
 
     socket.on('create',(room)=>{
-        console.log("oda yaratıldı",room);
         socket.join(room);
         rooms.push(room);
         io.emit('getroom',rooms);
-        console.log(rooms);
     });
-
-  
- 
+    socket.on('getroom',(room)=>{
+       io.emit('getroom',rooms);
+    });
     socket.on('new-message', (message) => {
         io.in(connectedRoom).emit('new-message',message);   
-        }
+        });
 
-    );
     socket.on('enteredchat',(message)=>{
-        connectedRoom.push(message[1]);
-         socket.join(message[1]);
-         socket.nickname = message[0];
-         console.log(socket.nickname,'connected to ', connectedRoom);
+        connectedRoom=message[1];
+        socket.join(connectedRoom);
+        socket.nickname = message[0];
+        var sending=[socket.nickname,'connectionmessage'];
+        io.in(connectedRoom).emit('new-message',sending);   
     });
     socket.on('disconnectchat',(message)=>{
         socket.leave(message);
-        connectedRoom = connectedRoom.filter(function(item) { 
-            return item !== message; 
-          });
-     
+        connectedRoom = null;
    });
     socket.on('name',(name)=>{
-    
         io.emit('name',name);
-       
     })
 });
 
